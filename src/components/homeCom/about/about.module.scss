@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+.body{
+    position: relative;
+    height: auto;
+    width: 100%;
+    min-height: 30%;
+    //background: black;
+    background-color: #191a1d ;
+
+    .mypicmyname{
+        position: relative;
+        max-height: calc(40vw * (4 / 5) + 1px);
+        height: calc(700px * (4 / 5) + 1px);
+        width: 100%;
+        transition: 0.5s;
+        perspective: 1000px;
+  
+  
+    
+        .myname{
+            transform: translateX(5%);
+            color: white;
+            position: absolute;
+            margin: 0;
+            font-size:clamp(2em,11vw,13em);
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            z-index: 14;
+            left: 0;
+            transition-property: all;
+            transition: 0.6s !important;
+        }
+        .mynameoutline{
+            left: 0;
+            transform: translateX(5%);
+            color: transparent;
+            position: absolute;
+            -webkit-text-stroke-width: 4px;
+            -webkit-text-stroke-color: white;
+            margin: 0;
+            font-size:clamp(2em,11vw,13em);
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            z-index: 16;
+            transition-property: all;
+            transition: 0.6s !important;
+        }
+        .mypic{
+            position: absolute;
+            //background-color: red;
+            max-width: calc(40vw * (5 / 4) + 1px);
+            max-height: calc(40vw * (4 / 5) + 1px);
+            height: calc(600px * (4 / 5) + 1px);
+            width: calc(700px *  (5 / 4) + 1px);
+            margin-top: 3%;
+            right: 5%;
+            display: inline-block;
+            transition: 0.5s;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             background-color: #121316;
+             z-index: 15;
+            img{
+                top: -5%;
+                  position: absolute;           
+                  width: 100%;
+                  height: auto;
+                  filter:   blur(0.5px);
+        
+            }
+            
+        }
+    }
+
+   .aboutme{
+    box-sizing: border-box;
+    position: relative;
+    height: auto;
+
+    width: 100% !important;
+    display: inline-block;
+    transition: 0.5s;
+    display: flex;
+    margin-top: 10%;
+    bottom: 20px;
+    .textContainer{
+        position: relative;
+        box-sizing: border-box;
+        height: auto;
+        width: 60%;
+        padding: 40px;
+        transition: 1s;
+        p{
+            color: #fff;
+            line-height: 130%;
+            letter-spacing: 1px;
+            font-family: 'Recursive', sans-serif;
+            font-weight: bold;
+            font-size:clamp(1em,1vw,7em);
+
+        }
+    }
+    .aboutmetext{
+    position: relative;
+     width: 40%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     .warper{
+         position: absolute;
+         height: 100%;
+         width: 100%;
+         perspective: 1000px;
+     }
+     .concon{
+        width: 30%;
+        animation-name: rotatee360deg;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-delay: var(--d);
+        transform-origin: right top;
+        perspective: 1000px;
+        transform-style: preserve-3d;
+      
+     }
+        p{
+            margin: 5px;
+            width: 50%;
+            color: white;
+            animation-delay: var(--d);
+            animation-duration: 10s;
+            animation-name: rotatetext;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            transform-origin:  left;
+            display: inline-block;
+            left: 50%;
+            top: 50%;
+        }
+        @keyframes rotatetext {
+          0% {transform:  rotateY(0); }
+          25%{transform:  rotateY(-90deg);}
+          50%{transform:  rotateY(-180deg);}
+          75%{transform:  rotateY(-270deg);}
+          100% {transform:  rotateY(-360deg); }
+        }
+        @keyframes rotatee360deg {
+          from { transform:rotateY(0deg); }
+         to { transform:rotateY(360deg); }
+
+        }
+        
+     
+     @keyframes rotatee {
+         from{transform: rotate(0deg);}
+         to{transform: rotate(360deg);}
+     }
+
+    }
+   }
+}

@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch } from "react-router-dom";
+import LoadingCom from './components/loadingCom/loadingCom'
+import HomeCom from './components/homeCom/homeCom'
+import { useState } from "react";
 
 function App() {
+  const [state,setState]=useState(false)
+  const goin=()=>{
+    setState(true)
+  }
+  const gout=()=>{
+    setState(false)
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <LoadingCom fnin={goin} fnout={gout}></LoadingCom>
+      <HomeCom stateLoadPage={state} ></HomeCom>
+
     </div>
   );
 }

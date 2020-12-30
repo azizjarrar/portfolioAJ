@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.body{
+    position: relative;
+    height: auto;
+    width: 100%;
+    min-height: 100%;
+    z-index: 165;
+   // overflow: hidden;
+   // background: linear-gradient(45deg, rgba(2,0,15,1) 0%, rgba(40,0,104,1) 100%);
+    perspective: 1000px;
+    overflow: visible;
+    background-image:url('4k.jpg');
+    perspective: 1000;
+    background-size: cover;
+    background-position:  center ;
+    background-attachment: fixed;
+
+    h1{
+        position: absolute;
+
+        margin: 0;
+        transition-property: all;
+        transition-property: transform;
+        transition: 0.6s !important;
+        text-align: center;
+        display: inline-block;
+        color:  white !important;
+        right: 50%;
+        bottom: 50%;
+        width: 100%;
+        transform: translate(-50%, 50%);
+        z-index: 5;
+        font-size:clamp(2em,5vw,11em);
+        text-transform: uppercase;
+        font-family: 'Raleway', sans-serif;
+        letter-spacing: 2px;
+        transition: 0.2s;
+       // transform: translate(-50%,-50%);
+
+        font-weight: 990 !important;
+        color: transparent;
+        filter: brightness(1.1) contrast(3) drop-shadow(3px 4px 3px white) !important;
+
+        span{
+            color: transparent;
+            margin: 0;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: yellow;
+        }
+    
+    }
+}
+.onestart{
+    position: absolute;
+    left: 0%;
+    width: 150px;
+    height: 1px;
+    border-radius: 5px;
+    border-radius: 999px;
+    animation-name: startLeftToRight;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    transform:translateX(-100%);
+    
+}
+/*.onestart:nth-child(n+0){
+background-color: #f34960 !important;
+filter:brightness(1.5) contrast(3)  drop-shadow(0 0 3px red) !important;
+}*/
+.onestart:nth-child(n+13){
+    background-color: #4a76c7 !important ;
+    filter:brightness(1.5) contrast(3) drop-shadow(0 0 3px black) !important;
+
+}
+.onestart:nth-child(n+26){
+    background-color: #c93145 !important;
+filter: brightness(1.5) contrast(3) drop-shadow(0 0 3px white) !important;
+}
+
+
+
+@keyframes startLeftToRight{
+    0%{
+        display: block;
+        opacity: 0;
+        transform:rotateZ(-30deg) perspective(500px) scale(var(--r)) translateZ(-30px)  translate(0vw,0%)
+    }
+        30%{
+            opacity: 1;
+
+        }
+    100%{
+        
+        transform:rotateZ(-30deg) perspective(500px) scale(var(--r))  translateZ(-30px)  translate(120vw,0%)
+    }
+    100%{
+        display: none;
+    }
+}
+
+.shownav{
+    position: absolute; 
+    right: 0px;
+    bottom: 0px;
+    height: 0px;
+    width: 0px;
+    transition: 0.3s !important;
+    border-top-left-radius: 100%;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    animation-name: demicirlce;
+    background-color: #ff0037 !important;
+   // filter: brightness(1.5) contrast(3) drop-shadow(0 0 3px rgb(180, 36, 36)) !important;
+    z-index: 15615;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    ul{
+        text-align: center;
+        font-size:clamp(2em,4vw,7em);
+        list-style-type: none;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        line-height: 1.6;
+        transform: translate(10%,10%);
+        font-family: 'Poppins',sans-serif !important;
+   
+        
+        &:hover{
+            
+            a{
+                //color: black;
+                //-webkit-text-fill-color: white; /* Will override color (regardless of order) */
+                color: transparent;
+                background-color: transparent;
+                -webkit-text-stroke-width: 2px;
+                -webkit-text-stroke-color: black;
+                cursor: pointer;
+                &:hover{
+                    filter:  drop-shadow(0 0 3px white) !important;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+.flipcard{
+    position: absolute; 
+    right: 5%;
+    bottom: 5%;
+    height: 100px;
+    width: 100px;
+    transition: 0.5s;
+    border-top-left-radius: 100%;
+    .goDown{
+        position: absolute;
+   
+        height: 10vw;
+        width: 10vw;
+        max-width: 100px;
+        min-width: 40px;
+        max-height: 100px;
+        min-height: 40px;
+        background-color: #191919;
+        border-radius: 50%;
+        transform: rotateY(0deg);
+        top: 0;
+        transition: 0.5s;
+        left: 0;
+        transform-style: preserve-3d;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+        animation-name: GoDown;
+        .front{
+            border-radius: 50%;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: #c93145 !important;
+            filter: brightness(1.5) contrast(3) drop-shadow(0 0 3px rgb(180, 36, 36)) !important;
+            top: 0;
+            left: 0;
+            backface-visibility: hidden;
+            &::after{
+                content: "";
+                height: 5px;
+                width: 47%;
+                background-color: white;
+                position: absolute;
+                transform: rotate(45deg);
+                bottom: 40%;
+                left: 12%;
+            }
+            &::before{
+                content: "";
+                height: 5px;
+                width: 47%;
+                background-color: white;
+                position: absolute;
+                transform: rotate(-45deg);
+                bottom: 40%;
+                right: 12%;
+            }
+        }   
+        .back{
+            border-radius: 50%;
+            transform: rotateY(180deg);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            backface-visibility: hidden;
+            background-color: white !important;
+            filter: brightness(1.5) contrast(3) drop-shadow(0 0 3px white) !important;
+            &::after{
+                content: "";
+                height: 5px;
+                width: 47%;
+                background-color: #c93145;
+                position: absolute;
+                transform: rotate(45deg);
+                bottom: 40%;
+                left: 12%;
+            }
+            &::before{
+                content: "";
+                height: 5px;
+                width: 47%;
+                background-color: #c93145;
+                position: absolute;
+                transform: rotate(-45deg);
+                bottom: 40%;
+                right: 12%;
+            }
+        }
+   
+        
+        @keyframes GoDown {
+            0%{
+                transform:  translate(0%,0) rotateY(0deg);
+            }
+            20%{
+                transform: translate(0,-15%) rotateY(180deg);
+            }
+            40%{
+                transform: translate(0,-0%) rotateY(180deg);
+            }
+            60%{
+                transform: translate(0,-15%) rotateY(360deg);
+            }
+            80%{
+                transform: translate(0,-0%) rotateY(360deg);
+            }
+            100%{
+                transform: translate(0,-0%) rotateY(360deg);
+            }
+        }
+    }
+    .goDown:hover{
+        animation: second-animation 1.1s ease-in-out infinite;
+    }
+ 
+ 
+
+    
+}
+.hidenav{
+    //  position: relative;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    animation-name: hidedemi !important;
+  }
+@keyframes hidedemi{
+    from{
+        height: 60vh;
+        width: 60vh;
+    }
+    to{
+        height: 0px;
+        width: 0px;
+    }
+
+}
+@keyframes demicirlce{
+    from{
+        height: 0px;
+        width: 0px;
+    }
+    to{
+        height: 60vh;
+        width: 60vh;
+    }
+
+}

@@ -1,0 +1,17 @@
+.body{
+    background-color: #2a2a2a;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow-Y: visible;
+    overflow-X: hidden;
+    z-index: 99;
+    transform-origin: left;
+    transform: rotateY(50deg);
+    transition: 0.5s;
+}
+
+.bodyrotate{
+    transform:  rotateY(20deg);
+
+}

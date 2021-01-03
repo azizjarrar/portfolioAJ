@@ -1,7 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 .body{
-    background-color: #000;
-    height: 100%;
+
+    
+
+    background-image: linear-gradient(to right top, #38438b, #944b94, #d75a88, #ff7e71, #ffb25f, #ffeb68);
+        //background-image: linear-gradient(to right top, #38438b, #944b94, #d75a88, #ff7e71, #ffb25f, #ffeb68);
+    opacity: 0;
+        height: 100%;
     width: 100%;
     position: absolute;
     display: flex;
@@ -11,12 +16,18 @@
     z-index: 100;
     opacity: 1;
     transition: 0.5s;
+    overflow: hidden;
 }
 .showHome{
     opacity: 0.7;
 }
+.hideThisCom{
+    opacity: 0;
+    display: none;
+}
+
 .loadingLine{
-    background-color: #fff7db;
+    background-color: white;
     height: 2px;
     width: 600px;
     animation-name: load;
@@ -29,37 +40,36 @@
     100%{width: 0;}
 }
 .presentation{
-    position: absolute;
+    position: relative;
     perspective: 1000px;
-    
+    text-align: center;
     span{
       //  transition: transform .6s cubic-bezier(0.215, 0.610, 0.355, 1.000);
         position: relative;
         animation-name: textanimation;
         animation-duration: 4s;
-        font-size: 3em;
+        font-size: 5em;
         letter-spacing: 1px;
         animation-timing-function: linear;
         animation-fill-mode: forwards;
-        color:#fff7db ;
+        color:white ;
         opacity: 0;
         text-rendering: optimizeLegibility!important;
         -webkit-tap-highlight-color: rgba(0,0,0,.05);
-        font-family: 'Cedarville Cursive', cursive;
+        text-shadow: 2px 3px 0px rgba(150, 150, 150, 1);
+        font-family: 'Poppins', sans-serif;
     }
     @keyframes textanimation {
         0%{opacity: 0}
-        50%{opacity: 1}
-        100%{opacity: 0;}
+        100%{opacity: 1;}
     }
 }
 .goin{
     //fcf8ea
+    margin-top: 10px;
     display: none;
-
     position: relative;
-    background-color: black;
-    border: 2px solid transparent;
+    background-color: white;
     height: 100px;
     width: 250px;
     display: flex;
@@ -88,7 +98,7 @@
     }
     span:nth-child(1){
         position: absolute;
-        background-color: #fff7db;
+        background-color: black;
         height: 100%;
         width: 2px;
         top: 0;
@@ -98,7 +108,7 @@
     }
     span:nth-child(2){
         position: absolute;
-        background-color: #fff7db;
+        background-color: black;
         height: 100%;
         width: 2px;
         top: 0;
@@ -108,7 +118,7 @@
     }
     span:nth-child(3){
         position: absolute;
-        background-color: #fff7db;
+        background-color: black;
         height: 2px;
         width: 100%;   
         top: 0;
@@ -118,7 +128,7 @@
     }
     span:nth-child(4){
         position: absolute;
-        background-color: #fff7db;
+        background-color: black;
         height: 2px;
         width: 100%;  
         bottom: 0;
@@ -130,7 +140,7 @@
         margin: 0;
         cursor: pointer;
         font-size: 2em;
-        -webkit-text-stroke: 1px #fff7db;
+        -webkit-text-stroke: 1px black;
         pointer-events: none;
 
     }
@@ -142,4 +152,23 @@
 @keyframes showBtn{
     from{opacity:0;display: none;}
     to{opacity:1 ;display: block;}
+}
+/**********************/
+.Mypics{
+    overflow: visible;
+    pointer-events: none;
+    position: absolute;
+    height: 95vh;
+    width: 95vh;
+    min-width: 600px;
+    min-height: 600px;
+    max-width: 900px;
+    max-height: 900px;
+    z-index: 156;
+
+}
+.audio{
+    position: absolute;
+    top: 0;
+    
 }

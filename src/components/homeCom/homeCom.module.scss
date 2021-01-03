@@ -6,12 +6,19 @@
     overflow-Y: visible;
     overflow-X: hidden;
     z-index: 99;
-    transform-origin: left;
-    transform: rotateY(50deg);
-    transition: 0.5s;
+    //transform-origin: left;
+    //transform: rotateY(50deg);
+    transition: 1s;
+    transform: translateZ(-1000px);
 }
 
 .bodyrotate{
-    transform:  rotateY(20deg);
+    //transform:  rotateY(20deg);
+    transform: translateZ(-500px);
+
+}
+.goinstate{
+   // transform:  rotateY(0deg);
+   transform: translateZ(-0px);
 
 }
